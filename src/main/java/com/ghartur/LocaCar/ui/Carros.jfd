@@ -14,82 +14,32 @@ new FormModel {
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
 					"$layoutConstraints": "flowy,insets dialog,hidemode 3,alignx left"
 					"$columnConstraints": "[50:50,shrink 0,fill][grow,fill][grow,fill][fill]"
-					"$rowConstraints": "[20:20]"
+					"$rowConstraints": "[40:40]"
 				} ) {
 					name: "contentPanel"
 					"preferredSize": new java.awt.Dimension( 400, 300 )
 					"minimumSize": new java.awt.Dimension( 400, 300 )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label1"
-						"text": "Nome"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 1"
-					} )
+					"font": new com.jformdesigner.model.SwingDerivedFont( "Inconsolata", 0, 16, true )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "textField1"
+						"font": new java.awt.Font( "Source Code Pro", 0, 18 )
 					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 						"value": "cell 1 2 2 1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label2"
-						"text": "Descrição"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 3"
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "textField2"
 					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 4 2 1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label3"
-						"text": "Preço"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 5"
+						"value": "cell 1 3 2 1"
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "textField3"
 					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 6 2 1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label4"
-						"text": "Placa"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 7"
+						"value": "cell 1 4 2 1"
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "textField4"
 					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 8 2 1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label7"
-						"text": "text"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 9"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox3"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 11 2 1"
-					} )
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "label5"
-						"text": "Marca"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 12"
-					} )
-					add( new FormComponent( "javax.swing.JComboBox" ) {
-						name: "comboBox1"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 1 13"
-					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button1"
-						"text": "text"
-					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-						"value": "cell 2 13"
+						"value": "cell 1 5 2 1"
 					} )
 				}, new FormLayoutConstraints( class java.lang.String ) {
 					"value": "West"
@@ -114,6 +64,7 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "cancelButton"
 						"text": "Cancel"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancel", true ) )
 					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 						"value": "cell 21 0"
 					} )

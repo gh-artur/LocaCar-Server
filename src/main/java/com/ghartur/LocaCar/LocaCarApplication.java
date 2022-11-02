@@ -1,10 +1,12 @@
 package com.ghartur.LocaCar;
 
+import com.ghartur.LocaCar.ui.HomePage;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import javax.swing.*;
 
 @SpringBootApplication
 public class LocaCarApplication {
@@ -14,8 +16,14 @@ public class LocaCarApplication {
 		return new ModelMapper();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+		UIManager.setLookAndFeel("com.formdev.flatlaf.FlatDarkLaf");
+		System.setProperty("java.awt.headless", "false");
 		SpringApplication.run(LocaCarApplication.class, args);
+		HomePage home = new HomePage();
+		home.setVisible(true);
+
 	}
 
 }
+

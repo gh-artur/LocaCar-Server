@@ -5,6 +5,7 @@
 package com.ghartur.LocaCar.ui;
 
 import java.awt.*;
+import java.awt.event.*;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -24,6 +25,18 @@ public class HomePage extends JFrame {
 
     public HomePage() {
         initComponents();
+        HomePage.setDefaultLookAndFeelDecorated(true);
+    }
+
+    private void button1(ActionEvent e) {
+
+
+    }
+
+    private void button2(ActionEvent e) {
+        // TODO add your code here
+        Carros carros = new Carros();
+        carros.setVisible(true);
     }
 
     private void initComponents() {
@@ -67,6 +80,7 @@ public class HomePage extends JFrame {
 
                 //---- button2 ----
                 button2.setText("CARROS");
+                button2.addActionListener(e -> button2(e));
                 contentPanel.add(button2, "cell 1 1 5 1");
 
                 //---- button3 ----
@@ -97,9 +111,6 @@ public class HomePage extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-
-        List<Rental> allRentals = rentalService.findAllRentals();
-        list1.add((Component) allRentals);
 
 
     }
