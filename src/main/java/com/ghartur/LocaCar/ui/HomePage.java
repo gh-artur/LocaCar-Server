@@ -56,23 +56,19 @@ public class HomePage extends JFrame {
 
         //======== dialogPane ========
         {
+            dialogPane.setMinimumSize(new Dimension(900, 700));
+            dialogPane.setPreferredSize(new Dimension(900, 700));
             dialogPane.setLayout(new BorderLayout());
 
             //======== contentPanel ========
             {
                 contentPanel.setLayout(new MigLayout(
-                    "insets dialog,hidemode 3",
+                    "insets dialog,hidemode 3,align center center",
                     // columns
-                    "[fill]" +
-                    "[fill]" +
-                    "[fill]" +
-                    "[fill]" +
-                    "[fill]" +
-                    "[fill]" +
-                    "[fill]" +
-                    "[fill]",
+                    "[80:80,fill]" +
+                    "[240:240,fill]" +
+                    "[80:80,fill]",
                     // rows
-                    "[60]" +
                     "[60]" +
                     "[60]" +
                     "[60]" +
@@ -81,24 +77,26 @@ public class HomePage extends JFrame {
                 //---- button2 ----
                 button2.setText("CARROS");
                 button2.addActionListener(e -> button2(e));
-                contentPanel.add(button2, "cell 1 1 5 1");
+                contentPanel.add(button2, "cell 1 0");
 
                 //---- button3 ----
                 button3.setText("CLIENTES");
-                contentPanel.add(button3, "cell 1 2 5 1");
+                contentPanel.add(button3, "cell 1 1");
 
                 //---- button4 ----
                 button4.setText("ALUGUEL");
-                contentPanel.add(button4, "cell 1 3 5 1");
+                contentPanel.add(button4, "cell 1 2");
 
                 //---- button5 ----
                 button5.setText("RELAT\u00d3RIOS");
-                contentPanel.add(button5, "cell 1 4 5 1");
+                contentPanel.add(button5, "cell 1 3");
             }
             dialogPane.add(contentPanel, BorderLayout.LINE_START);
 
             //======== scrollPane1 ========
             {
+                scrollPane1.setMinimumSize(new Dimension(300, 700));
+                scrollPane1.setPreferredSize(new Dimension(300, 700));
 
                 //---- list1 ----
                 list1.setBorder(LineBorder.createBlackLineBorder());
