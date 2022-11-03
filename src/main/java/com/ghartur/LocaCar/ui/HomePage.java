@@ -39,14 +39,30 @@ public class HomePage extends JFrame {
         carros.setVisible(true);
     }
 
+    private void clientesBtn(ActionEvent e) {
+        // TODO add your code here
+        Clientes clientes = new Clientes();
+        clientes.setVisible(true);
+    }
+
+    private void aluguelBtn(ActionEvent e) {
+        // TODO add your code here
+        Aluguel aluguel = new Aluguel();
+        aluguel.setVisible(true);
+    }
+
+    private void relatoriosBtn(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         dialogPane = new JPanel();
         contentPanel = new JPanel();
-        button2 = new JButton();
-        button3 = new JButton();
-        button4 = new JButton();
-        button5 = new JButton();
+        carrosBtn = new JButton();
+        clientesBtn = new JButton();
+        aluguelBtn = new JButton();
+        relatoriosBtn = new JButton();
         scrollPane1 = new JScrollPane();
         list1 = new JList();
 
@@ -74,22 +90,25 @@ public class HomePage extends JFrame {
                     "[60]" +
                     "[60]"));
 
-                //---- button2 ----
-                button2.setText("CARROS");
-                button2.addActionListener(e -> button2(e));
-                contentPanel.add(button2, "cell 1 0");
+                //---- carrosBtn ----
+                carrosBtn.setText("CARROS");
+                carrosBtn.addActionListener(e -> button2(e));
+                contentPanel.add(carrosBtn, "cell 1 0");
 
-                //---- button3 ----
-                button3.setText("CLIENTES");
-                contentPanel.add(button3, "cell 1 1");
+                //---- clientesBtn ----
+                clientesBtn.setText("CLIENTES");
+                clientesBtn.addActionListener(e -> clientesBtn(e));
+                contentPanel.add(clientesBtn, "cell 1 1");
 
-                //---- button4 ----
-                button4.setText("ALUGUEL");
-                contentPanel.add(button4, "cell 1 2");
+                //---- aluguelBtn ----
+                aluguelBtn.setText("ALUGUEL");
+                aluguelBtn.addActionListener(e -> aluguelBtn(e));
+                contentPanel.add(aluguelBtn, "cell 1 2");
 
-                //---- button5 ----
-                button5.setText("RELAT\u00d3RIOS");
-                contentPanel.add(button5, "cell 1 3");
+                //---- relatoriosBtn ----
+                relatoriosBtn.setText("RELAT\u00d3RIOS");
+                relatoriosBtn.addActionListener(e -> relatoriosBtn(e));
+                contentPanel.add(relatoriosBtn, "cell 1 3");
             }
             dialogPane.add(contentPanel, BorderLayout.LINE_START);
 
@@ -116,10 +135,10 @@ public class HomePage extends JFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JPanel dialogPane;
     private JPanel contentPanel;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
+    private JButton carrosBtn;
+    private JButton clientesBtn;
+    private JButton aluguelBtn;
+    private JButton relatoriosBtn;
     private JScrollPane scrollPane1;
     private JList list1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on

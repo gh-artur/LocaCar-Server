@@ -189,6 +189,7 @@ public class Carros extends JFrame {
 
                 //---- cancelButton ----
                 cancelButton.setText("Cancel");
+                cancelButton.addActionListener(e -> cancel(e));
                 buttonBar.add(cancelButton, "cell 21 0");
             }
             dialogPane.add(buttonBar, BorderLayout.SOUTH);

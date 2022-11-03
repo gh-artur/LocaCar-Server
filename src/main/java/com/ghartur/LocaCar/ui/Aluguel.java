@@ -4,15 +4,11 @@
 
 package com.ghartur.LocaCar.ui;
 
-import java.awt.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import javax.swing.*;
-import javax.swing.text.DateFormatter;
-import javax.swing.text.DefaultFormatterFactory;
-import javax.swing.text.MaskFormatter;
+import java.awt.event.*;
+import net.miginfocom.swing.MigLayout;
 
-import net.miginfocom.swing.*;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * @author unknown
@@ -20,6 +16,10 @@ import net.miginfocom.swing.*;
 public class Aluguel extends JFrame {
     public Aluguel() {
         initComponents();
+    }
+
+    private void cancel(ActionEvent e) {
+        this.setVisible(false);
     }
 
     private void initComponents() {
@@ -79,6 +79,10 @@ public class Aluguel extends JFrame {
 
                 //---- cancelButton ----
                 cancelButton.setText("Cancel");
+                cancelButton.addActionListener(e -> {
+			cancel(e);
+			cancel(e);
+		});
                 buttonBar.add(cancelButton, "cell 1 0");
             }
             dialogPane.add(buttonBar, BorderLayout.SOUTH);
@@ -101,4 +105,6 @@ public class Aluguel extends JFrame {
     private JButton okButton;
     private JButton cancelButton;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
+
+
 }
