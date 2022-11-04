@@ -6,42 +6,25 @@ package com.ghartur.LocaCar.ui;
 
 import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.border.*;
-import javax.swing.plaf.ListUI;
-
-import ch.qos.logback.core.joran.util.beans.BeanUtil;
-import com.ghartur.LocaCar.model.Car;
-import com.ghartur.LocaCar.repository.CarRepository;
-import com.ghartur.LocaCar.service.CarService;
-import com.ghartur.LocaCar.service.impl.CarServiceImpl;
 import net.miginfocom.swing.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /**
  * @author unknown
  */
-
-@Component
 public class Carros extends JFrame {
-
-
-
-    private void cancel(ActionEvent e) {
-        // TODO add your code here
-        this.setVisible(false);
-    }
-
-    public Carros(){
+    public Carros() {
         initComponents();
     }
 
+    private void cancel(ActionEvent e) {
+        // TODO add your code here
+        this.dispose();
+    }
+
     private void initComponents() {
-
-
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         dialogPane = new JPanel();
         contentPanel = new JPanel();
@@ -228,9 +211,6 @@ public class Carros extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-
-
-
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off

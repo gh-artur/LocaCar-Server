@@ -19,6 +19,7 @@ new FormModel {
 						name: "carrosBtn"
 						"text": "CARROS"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "carrosBtn", true ) )
 					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 						"value": "cell 1 0"
 					} )

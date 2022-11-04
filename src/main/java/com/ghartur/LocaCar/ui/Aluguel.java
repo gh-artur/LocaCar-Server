@@ -19,7 +19,7 @@ public class Aluguel extends JFrame {
     }
 
     private void cancel(ActionEvent e) {
-        this.setVisible(false);
+        this.dispose();
     }
 
     private void initComponents() {

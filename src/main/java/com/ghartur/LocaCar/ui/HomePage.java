@@ -4,18 +4,13 @@
 
 package com.ghartur.LocaCar.ui;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.List;
-import javax.swing.*;
-import javax.swing.border.*;
-
-import com.ghartur.LocaCar.controller.RentalController;
-import com.ghartur.LocaCar.model.Rental;
-import com.ghartur.LocaCar.service.RentalService;
 import com.ghartur.LocaCar.service.impl.RentalServiceImpl;
-import net.miginfocom.swing.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import net.miginfocom.swing.MigLayout;
+
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * @author unknown
@@ -28,15 +23,6 @@ public class HomePage extends JFrame {
         HomePage.setDefaultLookAndFeelDecorated(true);
     }
 
-    private void button1(ActionEvent e) {
-
-
-    }
-
-    private void button2(ActionEvent e) {
-        // TODO add your code here
-
-    }
 
     private void clientesBtn(ActionEvent e) {
         // TODO add your code here
@@ -52,6 +38,12 @@ public class HomePage extends JFrame {
 
     private void relatoriosBtn(ActionEvent e) {
         // TODO add your code here
+    }
+
+    private void carrosBtn(ActionEvent e) {
+        // TODO add your code here
+        Carros carros = new Carros();
+        carros.setVisible(true);
     }
 
     private void initComponents() {
@@ -91,7 +83,9 @@ public class HomePage extends JFrame {
 
                 //---- carrosBtn ----
                 carrosBtn.setText("CARROS");
-                carrosBtn.addActionListener(e -> button2(e));
+                carrosBtn.addActionListener(e -> {
+			carrosBtn(e);
+		});
                 contentPanel.add(carrosBtn, "cell 1 0");
 
                 //---- clientesBtn ----
