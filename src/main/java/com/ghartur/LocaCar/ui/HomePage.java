@@ -35,8 +35,7 @@ public class HomePage extends JFrame {
 
     private void button2(ActionEvent e) {
         // TODO add your code here
-        Carros carros = new Carros();
-        carros.setVisible(true);
+
     }
 
     private void clientesBtn(ActionEvent e) {
