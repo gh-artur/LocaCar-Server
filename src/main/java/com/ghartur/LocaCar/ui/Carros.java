@@ -24,6 +24,10 @@ public class Carros extends JFrame {
         this.dispose();
     }
 
+    private void button2(ActionEvent e) {
+        // TODO add your code here
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         dialogPane = new JPanel();
@@ -133,6 +137,7 @@ public class Carros extends JFrame {
 
                 //---- button2 ----
                 button2.setText("Adicionar");
+                button2.addActionListener(e -> button2(e));
                 contentPanel.add(button2, "cell 2 13");
 
                 //---- label7 ----
